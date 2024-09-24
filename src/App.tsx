@@ -7,6 +7,7 @@ import {Route, Routes } from "react-router-dom";
 import { router } from "./Config/config";
 import News from "./Components/News";
 import Search from "./Components/Search";
+import Weather from "./Components/Weather";
 
 const App = () => {
   const { setUser } = useStore();
@@ -27,7 +28,7 @@ const App = () => {
     <>
     
     <Navbar />
-
+ <Weather/>
     <Routes>
       {router.map((route) => (
         <Route key={route.key} path={route.path} element={<News category={route.category} country={"india"} />} />

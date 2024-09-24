@@ -61,8 +61,7 @@ const News = ({ country, category }: { country: string; category: string }) => {
         console.error("Error saving article: ", error);
     }
 };
-  // Function to get saved articles
-  const getSavedArticles = async () => {
+    const getSavedArticles = async () => {
     try {
       const user = auth.currentUser;
 
@@ -97,7 +96,7 @@ const News = ({ country, category }: { country: string; category: string }) => {
     }
   };
 
-  // Function to get news articles
+  
   const getNews = async () => {
     try {
       setIsLoading(true);
@@ -110,7 +109,7 @@ const News = ({ country, category }: { country: string; category: string }) => {
     }
   };
 
-  // Check if the article is saved
+  
   const isArticleSaved = (articleUrl: string) => {
     return savedArticles.some((savedArticle) => savedArticle.url === articleUrl);
   };
